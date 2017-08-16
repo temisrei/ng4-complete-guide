@@ -1,5 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { Recipe } from './recipe.model';
+import { Ingredient } from '../shared/ingredient.model';
 
 @Injectable()
 export class RecipeService {
@@ -7,8 +8,27 @@ export class RecipeService {
 
   private recipes: Recipe[] = [
     // tslint:disable-next-line:max-line-length
-    new Recipe('1st Test Recipe', 'This is simply a [first] test', 'http://www.seriouseats.com/images/2015/09/20150914-pressure-cooker-recipes-roundup-04.jpg'),
-    new Recipe('2nd Test Recipe', 'This is simply a [second] test', 'http://www.seriouseats.com/images/2015/09/20150914-pressure-cooker-recipes-roundup-05.jpg')
+    new Recipe(
+      'Fluffy Oven Scrambled Eggs',
+      'READY IN: 30mins',
+      'http://img.sndimg.com/food/image/upload/h_420,w_560,c_fit/v1/img/recipes/11/80/47/picB131a6.jpg',
+      [
+        new Ingredient('melted butter', 0.25),
+        new Ingredient('eggs', 12),
+        new Ingredient('salt', 1),
+        new Ingredient('milk', 1.25)
+      ]
+    ),
+    new Recipe(
+      'Substitute for Mascarpone Cheese',
+      'READY IN: 5mins',
+      'http://img.sndimg.com/food/image/upload/h_420,w_560,c_fit/v1/img/recipes/28/62/0/pic7NCTfb.jpg',
+      [
+        new Ingredient('cream cheese', 16),
+        new Ingredient('sour cream', 0.33),
+        new Ingredient('heavy whipping cream', 0.25)
+      ]
+    )
   ];
 
   constructor() { }
