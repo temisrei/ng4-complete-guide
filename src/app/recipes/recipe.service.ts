@@ -1,8 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { Recipe } from './recipe.model';
 
 @Injectable()
 export class RecipeService {
+  recipeSelected = new EventEmitter<Recipe>();
+
   private recipes: Recipe[] = [
     // tslint:disable-next-line:max-line-length
     new Recipe('1st Test Recipe', 'This is simply a [first] test', 'http://www.seriouseats.com/images/2015/09/20150914-pressure-cooker-recipes-roundup-04.jpg'),
@@ -14,4 +16,5 @@ export class RecipeService {
   getRecipes() {
     return this.recipes.slice();
   }
+
 }
