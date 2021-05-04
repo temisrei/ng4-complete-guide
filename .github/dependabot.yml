@@ -1,0 +1,49 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "21:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@angular/cli"
+    versions:
+    - 11.1.4
+    - 11.2.0
+    - 11.2.10
+    - 11.2.2
+    - 11.2.4
+    - 11.2.9
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.25
+    - 14.14.26
+    - 14.14.27
+    - 14.14.28
+    - 14.14.32
+    - 14.14.33
+    - 14.14.34
+    - 14.14.41
+  - dependency-name: core-js
+    versions:
+    - 3.10.2
+  - dependency-name: "@types/jasmine"
+    versions:
+    - 3.6.8
+  - dependency-name: jasmine-core
+    versions:
+    - 3.7.1
+  - dependency-name: "@angular/language-service"
+    versions:
+    - 11.1.2
+    - 11.2.0
+    - 11.2.1
+  - dependency-name: "@angular/animations"
+    versions:
+    - 11.1.2
+    - 11.2.0
+  - dependency-name: karma
+    versions:
+    - 6.0.4
+    - 6.1.0
